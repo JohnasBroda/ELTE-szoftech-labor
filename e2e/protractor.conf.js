@@ -4,7 +4,7 @@
 const { SpecReporter } = require("jasmine-spec-reporter");
 
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout: 5000,
   specs: ["./src/**/*.e2e-spec.ts"],
   // capabilities: {
   //   browserName: "chrome",
@@ -20,17 +20,24 @@ exports.config = {
       browserName: "opera",
     },
   ],
-  seleniumAddress: "http://selenium-grid.elte:4444/wd/hub",
+  directConnect: false,
+  seleniumAddress: "http://selenium-grid.elte/wd/hub",
+  getPageTimeout: 5000,
   framework: "jasmine",
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 5000,
     print: function () {},
   },
   onPrepare() {
     require("ts-node").register({
       project: require("path").join(__dirname, "./tsconfig.e2e.json"),
     });
+
+    require("zone.js/dist/zone");
+    require("zone.js/dist/async-test.js");
+    require("zone.js/dist/proxy.js");
+
     jasmine
       .getEnv()
       .addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
