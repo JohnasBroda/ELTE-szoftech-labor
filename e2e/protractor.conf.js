@@ -21,7 +21,7 @@ exports.config = {
     },
   ],
   directConnect: false,
-  seleniumAddress: "http://selenium-grid.elte/wd/hub",
+  seleniumAddress: "http://172.27.241.163:30393/wd/hub",
   getPageTimeout: 5000,
   framework: "jasmine",
   jasmineNodeOpts: {

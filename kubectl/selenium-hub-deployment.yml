@@ -35,6 +35,7 @@ spec:
       labels:
         app: selenium-hub
     spec:
+      hostNetwork: true
       containers:
         - name: selenium-hub
           image: selenium/hub:3.141.59-xenon

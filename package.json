@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "selenium-ide-tests": "selenium-side-runner example-project.side",
     "test-with-selenium-ide": "npm run start --watch=false & npm run selenium-ide-tests",
-    "cmd": "start cmd.exe @cmd /k \"npm run selenium-ide-tests\""
+    "cmd": "start cmd.exe @cmd /k \"npm run selenium-ide-tests\"",
+    "side-test": "selenium-side-runner visit-github.side --force --debug --output-directory=./"
   },
   "private": true,
   "dependencies": {

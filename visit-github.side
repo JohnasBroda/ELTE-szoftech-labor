@@ -1,0 +1,82 @@
+{
+  "id": "9039bdb8-cf75-4bfb-b2ae-43d53d56eb14",
+  "version": "2.0",
+  "name": "visit-github",
+  "url": "https://github.com",
+  "tests": [{
+    "id": "6e070f06-d09c-4dca-be40-7d2883307e9e",
+    "name": "visit-angular-repo",
+    "commands": [{
+      "id": "ed09d581-b8c2-4d72-bded-e2c55c88548f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "576f0321-aed3-43a8-8929-bb5fb0d3b31d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1520x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70a1653e-1d12-4a72-af0a-f43eb4175bb5",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.header-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94781a29-d700-4b38-8cc9-f36814f5ba91",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.header-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "angular"
+    }, {
+      "id": "beef51c5-9360-4e90-aede-ce80ee2b8faf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jump-to-suggestion-search-global .jump-to-suggestion-name",
+      "targets": [
+        ["css=#jump-to-suggestion-search-global .jump-to-suggestion-name", "css:finder"],
+        ["xpath=//li[@id='jump-to-suggestion-search-global']/a/div[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "963e517d-5732-4e04-a226-c8b5e965dbec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.repo-list-item:nth-child(1) em",
+      "targets": [
+        ["css=.repo-list-item:nth-child(1) em", "css:finder"],
+        ["xpath=//main[@id='js-pjax-container']/div/div[3]/div/ul/li/div[2]/div/a/em", "xpath:idRelative"],
+        ["xpath=//em", "xpath:position"],
+        ["xpath=//em[contains(.,'angular')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "052fcba9-9d63-442c-b4c8-2d8bde34df5d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6e070f06-d09c-4dca-be40-7d2883307e9e"]
+  }],
+  "urls": ["https://github.com/"],
+  "plugins": []
+}

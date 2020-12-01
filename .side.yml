@@ -1,0 +1,27 @@
+baseUrl: "https://github.com"
+server: "http://172.27.241.163:30393/wd/hub"
+proxyType: direct
+outputDirectory: "./side-tests"
+multiCapabilities:
+  chromeOptions:
+    build: "chrome tests"
+    name: "chrome tests"
+    platform: "Windows 10"
+    browserName: "Chrome"
+    version: "87.0"
+    tunnel: true
+    console: true
+    visual: true
+    headless: true
+    nogpu: true
+  firefoxOptions:
+    build: "FF tests"
+    name: "FF tests"
+    platform: "Windows 10"
+    browserName: "Firefox"
+    version: "82.0"
+    tunnel: true
+    console: true
+    visual: true
+    headless: true
+
