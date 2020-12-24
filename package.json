@@ -8,10 +8,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "start:prod": "ng serve --prod",
     "selenium-ide-tests": "selenium-side-runner example-project.side",
     "test-with-selenium-ide": "npm run start --watch=false & npm run selenium-ide-tests",
     "cmd": "start cmd.exe @cmd /k \"npm run selenium-ide-tests\"",
-    "side-test": "selenium-side-runner visit-github.side --force --debug --output-directory=./"
+    "side-test": "selenium-side-runner visit-github.side --force --debug --output-directory=./ --output-format=junit",
+    "github-side": "selenium-side-runner github-search.side --force --debug --output-directory=./ --output-format=junit",
+    "expose-selenium-grid": "kubectl expose deployment selenium-hub-deployment --type=NodePort --port=4444"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +28,6 @@
     "@angular/platform-browser-dynamic": "^10.2.0",
     "@angular/router": "^10.2.0",
     "bootstrap": "^4.5.3",
-    "chromedriver": "^86.0.0",
     "core-js": "^3.6.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.3",
@@ -48,6 +50,7 @@
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
     "protractor": "^7.0.0",
+    "selenium-side-runner": "^3.17.0",
     "ts-node": "~9.0.0",
     "tslint": "~6.1.3",
     "typescript": "~4.0.3"

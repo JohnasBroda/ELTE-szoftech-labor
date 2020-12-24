@@ -1,0 +1,104 @@
+{
+  "id": "f5331ae9-2f34-49ea-a260-ddfce86340c4",
+  "version": "2.0",
+  "name": "github-search",
+  "url": "https://githubbb.com",
+  "tests": [{
+    "id": "7f3d95ef-4b6d-4cde-85c3-510267e2d035",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "007c6b90-5c28-4f3c-8c38-b208246a03f0",
+    "name": "visit-angular-docs",
+    "commands": [{
+      "id": "e97bc4d2-19b5-4a1f-8801-fd01bf09048b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "078a9259-7680-49fe-baae-60099615181b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1524x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0e3ed30-6c3b-4a2e-bca0-3a0c961d0cb1",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.header-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3792af0-03cc-4ce0-b6ff-bc08e4eb9f20",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.header-search-input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "angulardsasd"
+    }, {
+      "id": "ab28f50b-337d-44be-b8cb-0f131654686e",
+      "comment": "",
+      "command": "clicks",
+      "target": "css=#jump-to-suggestion-repository-24195339 .jump-to-suggestion-name",
+      "targets": [
+        ["css=#jump-to-suggestion-repository-24195339 .jump-to-suggestion-name", "css:finder"],
+        ["xpath=//li[@id='jump-to-suggestion-repository-24195339']/a/div[2]", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9e1f90f-7e87-41f1-804a-be627a4778a4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=API",
+      "targets": [
+        ["linkText=API", "linkText"],
+        ["css=ul:nth-child(9) > li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'API')]", "xpath:link"],
+        ["xpath=//div[@id='readme']/div[3]/article/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://angular.io/api')]", "xpath:href"],
+        ["xpath=//article/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'API')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a71f3ad-b839-4c69-b3a7-99e3a9bdedd4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=animate",
+      "targets": [
+        ["linkText=animate", "linkText"],
+        ["css=.ng-star-inserted:nth-child(1) .api-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'animate')]", "xpath:link"],
+        ["xpath=//main[@id='api']/aio-doc-viewer/div/div/aio-api-list/article/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'api/animations/animate')]", "xpath:href"],
+        ["xpath=//div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,' animate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b1732f06-5977-43fd-b610-bac906dba3a3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7f3d95ef-4b6d-4cde-85c3-510267e2d035"]
+  }],
+  "urls": ["https://github.com/"],
+  "plugins": []
+}

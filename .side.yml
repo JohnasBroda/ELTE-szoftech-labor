@@ -1,7 +1,8 @@
 baseUrl: "https://github.com"
-server: "http://172.27.241.163:30393/wd/hub"
+server: "http://172.27.244.222:30393/wd/hub"
 proxyType: direct
-outputDirectory: "./side-tests"
+outputDirectory: "./"
+outputFormat: "junit"
 multiCapabilities:
   chromeOptions:
     build: "chrome tests"

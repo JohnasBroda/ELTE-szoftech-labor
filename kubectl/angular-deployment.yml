@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-e2e-app
+spec:
+  selector:
+    matchLabels:
+      app: angular
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: angular-e2e-app
+        app: angular
+    spec:
+      containers:
+        - name: angular
+          image: docker.pkg.github.com/johnasbroda/elte-szoftech-labor/angular-e2e-app:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+      imagePullSecrets:
+        - name: regcred
+
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
+kind: Service
+apiVersion: v1
+metadata:
+  name: angular-service
+spec:
+  selector:
+    app: angular
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31000
+  type: NodePort
